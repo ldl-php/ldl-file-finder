@@ -1,0 +1,29 @@
+{
+    "name": "ldl-framework/file-finder",
+    "type": "library",
+    "description": "File finder",
+    "keywords": [
+        "FS",
+        "Filesystem",
+	"files",
+	"finder"
+    ],
+    "homepage": "https://github.com/pthreat/ldl-file-finder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Federico Stange",
+            "email": "jpfstange@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "symfony/finder": "^5.1",
+	"ldl-framework/file-common": "^0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LDL\\": "src/"
+        }
+    }
+}
