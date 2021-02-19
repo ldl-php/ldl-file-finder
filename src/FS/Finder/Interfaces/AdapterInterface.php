@@ -2,7 +2,7 @@
 
 namespace LDL\FS\Finder\Interfaces;
 
-use LDL\FS\Type\Types\Generic\Collection\GenericFileCollection;
+use LDL\FS\Type\FileCollection;
 
 interface AdapterInterface
 {
@@ -13,30 +13,30 @@ interface AdapterInterface
      * @param array $files
      * @param bool $includeDotFiles
      *
-     * @return GenericFileCollection
+     * @return FileCollection
      */
     public static function find(
         array $directories,
         array $files,
         bool $includeDotFiles=false
-    ) : GenericFileCollection;
+    ) : FileCollection;
 
     /**
      * Find files through a regex
      *
      * @param string $regex
      * @param array $directories
-     * @return GenericFileCollection
+     * @return FileCollection
      */
-    public static function findRegex(string $regex, array $directories): GenericFileCollection;
+    public static function findRegex(string $regex, array $directories): FileCollection;
 
     /**
      * Finds files matching a regex
      *
      * @param string $match
      * @param array $directories
-     * @return GenericFileCollection
+     * @return FileCollection
      */
-    public static function findMatching(string $match, array $directories) : GenericFileCollection;
+    public static function findMatching(string $match, array $directories) : FileCollection;
 
 }

@@ -4,9 +4,8 @@ namespace LDL\FS\Finder\Adapter;
 
 use LDL\FS\Finder\Interfaces\AdapterInterface;
 
-use LDL\FS\Type\Types\Generic\Collection\GenericFileCollection;
+use LDL\FS\Type\FileCollection;
 
-use LDL\FS\Type\Types\Generic\GenericFileType;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo as FileInfo;
 
@@ -19,7 +18,7 @@ class LocalFileFinder implements AdapterInterface
         array $directories,
         array $files,
         bool $includeDotFiles = false
-    ): GenericFileCollection
+    ): FileCollection
     {
         $finder = new Finder();
 
@@ -33,10 +32,10 @@ class LocalFileFinder implements AdapterInterface
         })
         ->in($directories);
 
-        $collection = new GenericFileCollection();
+        $collection = new FileCollection();
 
         foreach($finder as $file){
-            $collection->append(new GenericFileType($file->getRealPath()));
+            $collection->append(new \SplFileInfo($file->getRealPath()));
         }
 
         return $collection;
@@ -45,7 +44,7 @@ class LocalFileFinder implements AdapterInterface
     /**
      * {@inheritdoc}
      */
-    public static function findRegex(string $regex, array $directories): GenericFileCollection
+    public static function findRegex(string $regex, array $directories): FileCollection
     {
         $finder = new Finder();
 
@@ -58,16 +57,16 @@ class LocalFileFinder implements AdapterInterface
         })
         ->in($directories);
 
-        $collection = new GenericFileCollection();
+        $collection = new FileCollection();
 
         foreach($finder as $file){
-            $collection->append(new GenericFileType($file->getRealPath()));
+            $collection->append(new \SplFileInfo($file->getRealPath()));
         }
 
         return $collection;
     }
 
-    public static function findMatching(string $match, array $directories) : GenericFileCollection
+    public static function findMatching(string $match, array $directories) : FileCollection
     {
         $finder = new Finder();
 
@@ -80,10 +79,10 @@ class LocalFileFinder implements AdapterInterface
         })
         ->in($directories);
 
-        $collection = new GenericFileCollection();
+        $collection = new FileCollection();
 
         foreach($finder as $file){
-            $collection->append(new GenericFileType($file->getRealPath()));
+            $collection->append(new \SplFileInfo($file->getRealPath()));
         }
 
         return $collection;

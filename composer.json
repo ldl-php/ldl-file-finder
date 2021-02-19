@@ -5,8 +5,8 @@
     "keywords": [
         "FS",
         "Filesystem",
-	    "files",
-	    "finder"
+        "files",
+        "finder"
     ],
     "homepage": "https://github.com/pthreat/ldl-file-finder",
     "license": "MIT",
@@ -21,7 +21,7 @@
     "require": {
         "php": ">=7.3",
         "symfony/finder": "^5.1",
-	    "ldl-framework/file-common": "dev-master"
+        "ldl-framework/file-common": "dev-master"
     },
     "autoload": {
         "psr-4": {
