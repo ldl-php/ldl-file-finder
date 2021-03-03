@@ -4,26 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b1a3a23e569c8f41fbe7a7de8b05f06",
+    "content-hash": "c1010c4f605c09e632c1c73f7d7aaaa9",
     "packages": [
         {
             "name": "ldl-framework/file-common",
-            "version": "v0.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pthreat/ldl-file-common.git",
-                "reference": "a810e20154566c759d11d4f5265ea76ad06d4868"
+                "reference": "4bd1b687ed7ce55fcc2d5e5521abfe6345ea1178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pthreat/ldl-file-common/zipball/a810e20154566c759d11d4f5265ea76ad06d4868",
-                "reference": "a810e20154566c759d11d4f5265ea76ad06d4868",
+                "url": "https://api.github.com/repos/pthreat/ldl-file-common/zipball/4bd1b687ed7ce55fcc2d5e5521abfe6345ea1178",
+                "reference": "4bd1b687ed7ce55fcc2d5e5521abfe6345ea1178",
                 "shasum": ""
             },
             "require": {
-                "ldl-framework/typed-collection": "^0.0.1",
-                "php": ">=7.1"
+                "ext-json": "*",
+                "ldl-framework/typed-collection": "dev-master",
+                "php": ">=7.3"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -50,29 +52,79 @@
                 "handling",
                 "type"
             ],
-            "time": "2020-07-20T16:04:34+00:00"
+            "support": {
+                "issues": "https://github.com/pthreat/ldl-file-common/issues",
+                "source": "https://github.com/pthreat/ldl-file-common/tree/master"
+            },
+            "time": "2020-12-04T15:32:17+00:00"
         },
         {
-            "name": "ldl-framework/typed-collection",
-            "version": "v0.0.1",
+            "name": "ldl-framework/framework-base",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pthreat/ldl-typed-collection.git",
-                "reference": "1e0bd3ea1cd198a5dae133cb2cbb264dd4bc1137"
+                "url": "https://github.com/pthreat/ldl-framework-base.git",
+                "reference": "c3cafb7ab2d223c96470712f536c3e457da715ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pthreat/ldl-typed-collection/zipball/1e0bd3ea1cd198a5dae133cb2cbb264dd4bc1137",
-                "reference": "1e0bd3ea1cd198a5dae133cb2cbb264dd4bc1137",
+                "url": "https://api.github.com/repos/pthreat/ldl-framework-base/zipball/c3cafb7ab2d223c96470712f536c3e457da715ea",
+                "reference": "c3cafb7ab2d223c96470712f536c3e457da715ea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "symfony/var-dumper": "^5.2"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LDL\\": "src/"
+                    "LDL\\Framework\\Base\\": "src/LDL/Framework/Base/",
+                    "LDL\\Framework\\Helper\\": "src/LDL/Framework/Helper/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Federico Stange",
+                    "email": "jpfstange@gmail.com"
+                }
+            ],
+            "description": "LDL Framework base contracts and exceptions",
+            "support": {
+                "issues": "https://github.com/pthreat/ldl-framework-base/issues",
+                "source": "https://github.com/pthreat/ldl-framework-base/tree/feature/1200175553157833"
+            },
+            "time": "2021-04-09T14:25:37+00:00"
+        },
+        {
+            "name": "ldl-framework/typed-collection",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pthreat/ldl-typed-collection.git",
+                "reference": "ca9af1d0a12b7692e883359ae3cf46744e6c5e42"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pthreat/ldl-typed-collection/zipball/ca9af1d0a12b7692e883359ae3cf46744e6c5e42",
+                "reference": "ca9af1d0a12b7692e883359ae3cf46744e6c5e42",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ldl-framework/framework-base": "dev-master",
+                "ldl-framework/validators": "dev-master",
+                "php": ">=7.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LDL\\Type\\": "src/Type/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -92,31 +144,78 @@
                 "php",
                 "type"
             ],
-            "time": "2020-07-20T01:32:47+00:00"
+            "support": {
+                "issues": "https://github.com/pthreat/ldl-typed-collection/issues",
+                "source": "https://github.com/pthreat/ldl-typed-collection/tree/fixes/1200171590526502"
+            },
+            "time": "2021-04-08T18:10:50+00:00"
         },
         {
-            "name": "symfony/finder",
-            "version": "v5.1.2",
+            "name": "ldl-framework/validators",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "4298870062bfc667cb78d2b379be4bf5dec5f187"
+                "url": "https://github.com/pthreat/ldl-validators.git",
+                "reference": "b7ff5e1093942f75193ae493cb21f73a738b419b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/4298870062bfc667cb78d2b379be4bf5dec5f187",
-                "reference": "4298870062bfc667cb78d2b379be4bf5dec5f187",
+                "url": "https://api.github.com/repos/pthreat/ldl-validators/zipball/b7ff5e1093942f75193ae493cb21f73a738b419b",
+                "reference": "b7ff5e1093942f75193ae493cb21f73a738b419b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ldl-framework/framework-base": "dev-master",
+                "php": ">=7.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LDL\\Validators\\": "src/LDL/Validators"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Federico",
+                    "email": "jpfstange@gmail.com"
+                },
+                {
+                    "name": "Gonzalo Coda",
+                    "email": "gonzalocoda@gmail.com"
+                }
+            ],
+            "description": "LDL Framework validators",
+            "homepage": "https://github.com/pthreat/ldl-validators",
+            "support": {
+                "issues": "https://github.com/pthreat/ldl-validators/issues",
+                "source": "https://github.com/pthreat/ldl-validators/tree/master"
+            },
+            "time": "2021-04-08T15:54:30+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v5.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "0d639a0943822626290d169965804f79400e6a04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/0d639a0943822626290d169965804f79400e6a04",
+                "reference": "0d639a0943822626290d169965804f79400e6a04",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Finder\\": ""
@@ -139,19 +238,293 @@
                     "homepage": "https://symfony.com/contributors"
                 }
             ],
-            "description": "Symfony Finder Component",
+            "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
-            "time": "2020-05-20T17:43:50+00:00"
+            "support": {
+                "source": "https://github.com/symfony/finder/tree/v5.2.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-02-15T18:55:04+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.22.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
+                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.22-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-22T09:19:47+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php80",
+            "version": "v1.22.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php80.git",
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/dc3063ba22c2a1fd2f45ed856374d79114998f91",
+                "reference": "dc3063ba22c2a1fd2f45ed856374d79114998f91",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.22-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php80\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ion Bazan",
+                    "email": "ion.bazan@gmail.com"
+                },
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.22.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-01-07T16:49:33+00:00"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v5.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "89412a68ea2e675b4e44f260a5666729f77f668e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/89412a68ea2e675b4e44f260a5666729f77f668e",
+                "reference": "89412a68ea2e675b4e44f260a5666729f77f668e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php80": "^1.15"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<5.4.3",
+                "symfony/console": "<4.4"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "symfony/console": "^4.4|^5.0",
+                "symfony/process": "^4.4|^5.0",
+                "twig/twig": "^2.13|^3.0.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "symfony/console": "To use the ServerDumpCommand and/or the bin/var-dump-server script"
+            },
+            "bin": [
+                "Resources/bin/var-dump-server"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides mechanisms for walking through any arbitrary PHP variable",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/var-dumper/tree/v5.2.6"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-03-28T09:42:18+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "ldl-framework/file-common": 20,
+        "ldl-framework/validators": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.1"
+        "php": ">=7.3",
+        "ext-json": "*",
+        "ext-fileinfo": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

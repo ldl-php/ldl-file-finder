@@ -21,7 +21,10 @@
     "require": {
         "php": ">=7.3",
         "symfony/finder": "^5.1",
-        "ldl-framework/file-common": "dev-master"
+        "ldl-framework/file-common": "dev-master",
+        "ldl-framework/validators": "dev-master",
+        "ext-json": "*",
+        "ext-fileinfo": "*"
     },
     "autoload": {
         "psr-4": {
