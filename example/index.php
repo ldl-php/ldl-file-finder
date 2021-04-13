@@ -5,7 +5,7 @@ require __DIR__.'/../vendor/autoload.php';
 use LDL\FS\Finder\Adapter\Type\Local\Facade\LocalFileFinderFacade;
 use LDL\FS\Finder\Validator\ExcludeDirectoryValidator;
 use LDL\FS\Finder\Collection\LocalDirectoryCollection;
-use \LDL\Validators\RegexValidator;
+use LDL\Validators\RegexValidator;
 use LDL\FS\Finder\Adapter\Type\Local\Validator\LocalFileHasRegexContentValidator;
 use LDL\FS\Finder\FoundFile;
 use LDL\FS\Finder\Validator\HasValidatorResultInterface;

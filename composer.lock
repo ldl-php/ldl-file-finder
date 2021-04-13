@@ -106,12 +106,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pthreat/ldl-typed-collection.git",
-                "reference": "ca9af1d0a12b7692e883359ae3cf46744e6c5e42"
+                "reference": "c7e847e7340e12dcb714996359f8de5f3aff82c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pthreat/ldl-typed-collection/zipball/ca9af1d0a12b7692e883359ae3cf46744e6c5e42",
-                "reference": "ca9af1d0a12b7692e883359ae3cf46744e6c5e42",
+                "url": "https://api.github.com/repos/pthreat/ldl-typed-collection/zipball/c7e847e7340e12dcb714996359f8de5f3aff82c4",
+                "reference": "c7e847e7340e12dcb714996359f8de5f3aff82c4",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +146,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pthreat/ldl-typed-collection/issues",
-                "source": "https://github.com/pthreat/ldl-typed-collection/tree/fixes/1200171590526502"
+                "source": "https://github.com/pthreat/ldl-typed-collection/tree/fix/1200190593143576"
             },
-            "time": "2021-04-08T18:10:50+00:00"
+            "time": "2021-04-13T16:28:02+00:00"
         },
         {
             "name": "ldl-framework/validators",

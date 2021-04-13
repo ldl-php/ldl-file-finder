@@ -3,18 +3,18 @@
 namespace LDL\FS\Finder\Adapter\Collection;
 
 use LDL\FS\Finder\Adapter\AdapterInterface;
-use LDL\Type\Collection\Traits\Validator\AppendValidatorChainTrait;
+use LDL\Type\Collection\Traits\Validator\AppendValueValidatorChainTrait;
 use LDL\Type\Collection\Types\Object\ObjectCollection;
 use LDL\Validators\InterfaceComplianceValidator;
 
 class AdapterCollection extends ObjectCollection
 {
-    use AppendValidatorChainTrait;
+    use AppendValueValidatorChainTrait;
 
     public function __construct(iterable $items = null)
     {
         parent::__construct($items);
-        $this->getAppendValidatorChain()
+        $this->getAppendValueValidatorChain()
             ->append(new InterfaceComplianceValidator(AdapterInterface::class))
             ->lock();
     }

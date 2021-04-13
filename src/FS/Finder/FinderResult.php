@@ -2,13 +2,13 @@
 
 namespace LDL\FS\Finder;
 
-use LDL\Type\Collection\Traits\Validator\AppendValidatorChainTrait;
+use LDL\Type\Collection\Traits\Validator\AppendValueValidatorChainTrait;
 use LDL\Type\Collection\Types\Object\ObjectCollection;
 use LDL\Validators\ClassComplianceValidator;
 
 class FinderResult extends ObjectCollection
 {
-    use AppendValidatorChainTrait;
+    use AppendValueValidatorChainTrait;
 
     public function __construct(
         iterable $items = null
@@ -16,7 +16,7 @@ class FinderResult extends ObjectCollection
     {
         parent::__construct($items);
 
-        $this->getAppendValidatorChain()
+        $this->getAppendValueValidatorChain()
             ->append(new ClassComplianceValidator(FoundFile::class, $strict=true))
             ->lock();
     }

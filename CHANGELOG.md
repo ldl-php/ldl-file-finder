@@ -11,3 +11,5 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - feature/1200190204650991 - Big refactor
 
 ### Changed
+
+-fix/1200190593143580 - Apply changes from ldl-typed-collection
