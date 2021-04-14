@@ -11,7 +11,7 @@ class LocalDirectoryCollection extends UniqueStringCollection
     {
         $dir = realpath($item);
 
-        if(false === $item){
+        if(false === $item || !is_dir($item)){
             throw new \InvalidArgumentException("Invalid directory specified $item");
         }
 

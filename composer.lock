@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1010c4f605c09e632c1c73f7d7aaaa9",
+    "content-hash": "3634470c7b3fd6702b09ae5492ed97bd",
     "packages": [
         {
             "name": "ldl-framework/file-common",
@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pthreat/ldl-framework-base.git",
-                "reference": "c3cafb7ab2d223c96470712f536c3e457da715ea"
+                "reference": "08878076a4935887c64ba9bf199257413174bf2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pthreat/ldl-framework-base/zipball/c3cafb7ab2d223c96470712f536c3e457da715ea",
-                "reference": "c3cafb7ab2d223c96470712f536c3e457da715ea",
+                "url": "https://api.github.com/repos/pthreat/ldl-framework-base/zipball/08878076a4935887c64ba9bf199257413174bf2e",
+                "reference": "08878076a4935887c64ba9bf199257413174bf2e",
                 "shasum": ""
             },
             "require": {
@@ -96,9 +96,9 @@
             "description": "LDL Framework base contracts and exceptions",
             "support": {
                 "issues": "https://github.com/pthreat/ldl-framework-base/issues",
-                "source": "https://github.com/pthreat/ldl-framework-base/tree/feature/1200175553157833"
+                "source": "https://github.com/pthreat/ldl-framework-base/tree/feature/1200197097272268"
             },
-            "time": "2021-04-09T14:25:37+00:00"
+            "time": "2021-04-14T18:36:58+00:00"
         },
         {
             "name": "ldl-framework/typed-collection",
@@ -156,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pthreat/ldl-validators.git",
-                "reference": "b7ff5e1093942f75193ae493cb21f73a738b419b"
+                "reference": "5900abc28010bc6c1d6932f1636c9d5d724c0c4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pthreat/ldl-validators/zipball/b7ff5e1093942f75193ae493cb21f73a738b419b",
-                "reference": "b7ff5e1093942f75193ae493cb21f73a738b419b",
+                "url": "https://api.github.com/repos/pthreat/ldl-validators/zipball/5900abc28010bc6c1d6932f1636c9d5d724c0c4b",
+                "reference": "5900abc28010bc6c1d6932f1636c9d5d724c0c4b",
                 "shasum": ""
             },
             "require": {
@@ -196,68 +196,7 @@
                 "issues": "https://github.com/pthreat/ldl-validators/issues",
                 "source": "https://github.com/pthreat/ldl-validators/tree/master"
             },
-            "time": "2021-04-08T15:54:30+00:00"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "v5.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "0d639a0943822626290d169965804f79400e6a04"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/0d639a0943822626290d169965804f79400e6a04",
-                "reference": "0d639a0943822626290d169965804f79400e6a04",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Finds files and directories via an intuitive fluent interface",
-            "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.2.4"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-02-15T18:55:04+00:00"
+            "time": "2021-04-15T16:08:46+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
