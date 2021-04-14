@@ -2,7 +2,6 @@
 
 namespace LDL\FS\Finder\Adapter\Type\Local\Validator;
 
-
 use LDL\Framework\Base\Collection\Contracts\CollectionInterface;
 use LDL\FS\Finder\Validator\HasValidatorResultInterface;
 use LDL\Validators\Config\ValidatorConfigInterface;
@@ -32,7 +31,12 @@ class LocalFileHasRegexContentValidator implements ValidatorInterface, HasValida
      * @param bool $storeLine
      * @param bool $strict
      */
-    public function __construct(string $regex, bool $match = true, bool $storeLine = true, bool $strict = true)
+    public function __construct(
+        string $regex,
+        bool $match = true,
+        bool $storeLine = true,
+        bool $strict = true
+    )
     {
         $this->config = new Config\LocalFileHasRegexContentValidatorConfig($regex, $match, $storeLine, $strict);
     }
@@ -48,7 +52,11 @@ class LocalFileHasRegexContentValidator implements ValidatorInterface, HasValida
         $lineNo = 0;
         $hasMatches = false;
 
-        $fp = fopen($path, 'rb');
+        $fp = @fopen($path, 'rb+');
+
+        if(false === $fp){
+            throw new \RuntimeException("File \"$path\" is not readable");
+        }
 
         while($line  = fgets($fp)){
             $lineNo++;
