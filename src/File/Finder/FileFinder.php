@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace LDL\FS\Finder;
+namespace LDL\File\Finder;
 
-use LDL\FS\Finder\Adapter\AdapterInterface;
-use LDL\FS\Finder\Adapter\Collection\AdapterCollection;
+use LDL\File\Finder\Adapter\AdapterInterface;
+use LDL\File\Finder\Adapter\Collection\AdapterCollection;
 
 class FileFinder implements FileFinderInterface
 {

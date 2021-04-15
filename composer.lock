@@ -4,60 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3634470c7b3fd6702b09ae5492ed97bd",
+    "content-hash": "6596e40def4493b5855967a7b29e6854",
     "packages": [
-        {
-            "name": "ldl-framework/file-common",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pthreat/ldl-file-common.git",
-                "reference": "4bd1b687ed7ce55fcc2d5e5521abfe6345ea1178"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pthreat/ldl-file-common/zipball/4bd1b687ed7ce55fcc2d5e5521abfe6345ea1178",
-                "reference": "4bd1b687ed7ce55fcc2d5e5521abfe6345ea1178",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "ldl-framework/typed-collection": "dev-master",
-                "php": ">=7.3"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LDL\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Federico Stange",
-                    "email": "jpfstange@gmail.com"
-                }
-            ],
-            "description": "Common classes for handling files",
-            "homepage": "https://github.com/pthreat/ldl-file-common",
-            "keywords": [
-                "collection",
-                "files",
-                "filesystem",
-                "fs",
-                "handling",
-                "type"
-            ],
-            "support": {
-                "issues": "https://github.com/pthreat/ldl-file-common/issues",
-                "source": "https://github.com/pthreat/ldl-file-common/tree/master"
-            },
-            "time": "2020-12-04T15:32:17+00:00"
-        },
         {
             "name": "ldl-framework/framework-base",
             "version": "dev-master",
@@ -156,12 +104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pthreat/ldl-validators.git",
-                "reference": "5900abc28010bc6c1d6932f1636c9d5d724c0c4b"
+                "reference": "9e422f9935bdd6db5b359346a78f744fb32f7d93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pthreat/ldl-validators/zipball/5900abc28010bc6c1d6932f1636c9d5d724c0c4b",
-                "reference": "5900abc28010bc6c1d6932f1636c9d5d724c0c4b",
+                "url": "https://api.github.com/repos/pthreat/ldl-validators/zipball/9e422f9935bdd6db5b359346a78f744fb32f7d93",
+                "reference": "9e422f9935bdd6db5b359346a78f744fb32f7d93",
                 "shasum": ""
             },
             "require": {
@@ -196,7 +144,7 @@
                 "issues": "https://github.com/pthreat/ldl-validators/issues",
                 "source": "https://github.com/pthreat/ldl-validators/tree/master"
             },
-            "time": "2021-04-15T16:08:46+00:00"
+            "time": "2021-04-15T17:53:36+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -454,8 +402,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "ldl-framework/file-common": 20,
-        "ldl-framework/validators": 20
+        "ldl-framework/validators": 20,
+        "ldl-framework/typed-collection": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

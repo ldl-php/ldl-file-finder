@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace LDL\FS\Finder\Adapter;
+namespace LDL\File\Finder\Adapter;
 
 use LDL\Framework\Base\Collection\CallableCollection;
 use LDL\Validators\Chain\ValidatorChainInterface;

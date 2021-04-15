@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace LDL\FS\Finder;
+namespace LDL\File\Finder;
 
 use LDL\Type\Collection\Traits\Validator\AppendValueValidatorChainTrait;
 use LDL\Type\Collection\Types\Object\ObjectCollection;

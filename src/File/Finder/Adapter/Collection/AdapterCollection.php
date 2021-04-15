@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace LDL\FS\Finder\Adapter\Collection;
+namespace LDL\File\Finder\Adapter\Collection;
 
-use LDL\FS\Finder\Adapter\AdapterInterface;
+use LDL\File\Finder\Adapter\AdapterInterface;
 use LDL\Type\Collection\Traits\Validator\AppendValueValidatorChainTrait;
 use LDL\Type\Collection\Types\Object\ObjectCollection;
 use LDL\Validators\InterfaceComplianceValidator;

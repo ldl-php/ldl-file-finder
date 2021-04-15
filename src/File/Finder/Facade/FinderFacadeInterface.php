@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace LDL\FS\Finder\Facade;
+namespace LDL\File\Finder\Facade;
 
-use LDL\FS\Finder\FinderResult;
+use LDL\File\Finder\FinderResult;
 
 interface FinderFacadeInterface
 {

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace LDL\FS\Finder;
+namespace LDL\File\Finder;
 
 interface FileFinderInterface
 {

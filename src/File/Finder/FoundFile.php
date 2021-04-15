@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace LDL\FS\Finder;
+namespace LDL\File\Finder;
 
 use LDL\Validators\Chain\ValidatorChainInterface;
 
@@ -19,13 +19,13 @@ class FoundFile
     /**
      * @var ?ValidatorChainInterface|null
      */
-    private $result;
+    private $validators;
 
     public function __construct(string $path, $fileObject, ValidatorChainInterface $result = null)
     {
         $this->path = $path;
         $this->fileObject = $fileObject;
-        $this->result = $result;
+        $this->validators = $result;
     }
 
     /**
@@ -49,7 +49,7 @@ class FoundFile
      */
     public function getValidatorChain(): ?ValidatorChainInterface
     {
-        return $this->result;
+        return $this->validators;
     }
 
     public function __toString()
