@@ -2,21 +2,22 @@
 
 namespace LDL\File\Finder\Facade;
 
-use LDL\File\Finder\FinderResult;
+use LDL\Validators\Chain\ValidatorChainInterface;
 
 interface FinderFacadeInterface
 {
     /**
-     * Find by using pure generators
-     * @param iterable $locations
+     * @param ValidatorChainInterface|null $chain
+     * @param iterable|null $onAccept
+     * @param iterable|null $onReject
+     * @param iterable|null $onFile
      * @return iterable
      */
-    public static function find(iterable $locations) : iterable;
+    public static function find(
+        ValidatorChainInterface $chain=null,
+        iterable $onAccept=null,
+        iterable $onReject=null,
+        iterable $onFile=null
+    ) : iterable;
 
-    /**
-     * Find by using a FinderResult (persisted in memory) class
-     * @param iterable $locations
-     * @return FinderResult
-     */
-    public static function findResult(iterable $locations) : FinderResult;
 }
