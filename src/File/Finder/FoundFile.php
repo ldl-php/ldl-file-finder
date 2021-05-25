@@ -2,9 +2,9 @@
 
 namespace LDL\File\Finder;
 
-use LDL\Validators\Chain\ValidatorChainInterface;
+use LDL\Validators\Collection\ValidatorCollectionInterface;
 
-class FoundFile
+class FoundFile implements FoundFileInterface
 {
     /**
      * @var string
@@ -17,11 +17,11 @@ class FoundFile
     private $fileObject;
 
     /**
-     * @var ?ValidatorChainInterface|null
+     * @var ValidatorCollectionInterface
      */
     private $validators;
 
-    public function __construct(string $path, $fileObject, ValidatorChainInterface $result = null)
+    public function __construct(string $path, $fileObject, ValidatorCollectionInterface $result = null)
     {
         $this->path = $path;
         $this->fileObject = $fileObject;
@@ -45,9 +45,9 @@ class FoundFile
     }
 
     /**
-     * @return ValidatorChainInterface|null
+     * @return ValidatorCollectionInterface
      */
-    public function getValidatorChain(): ?ValidatorChainInterface
+    public function getValidatorChain(): ValidatorCollectionInterface
     {
         return $this->validators;
     }

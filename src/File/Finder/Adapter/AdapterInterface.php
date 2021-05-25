@@ -16,9 +16,9 @@ interface AdapterInterface
     /**
      * Obtains the chain of validators
      *
-     * @return ValidatorChainInterface
+     * @return null|ValidatorChainInterface
      */
-    public function getValidatorChain(): ValidatorChainInterface;
+    public function getValidatorChain(): ?ValidatorChainInterface;
 
 
     /**
