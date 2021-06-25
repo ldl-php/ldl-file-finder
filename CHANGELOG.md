@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Added
 
+- feature/1200523060528385 - Create DirectoryCollection - Add recursive flag - Remove onAccept, onReject and onFile methods from AdapterInterface
 - feature/1200379001241314 - Create FoundFileInterface
 - feature/1200190593143584 - Add 3 callback collections: onFile, onReject and onAccept
 - feature/1200190204650991 - Big refactor

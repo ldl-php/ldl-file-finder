@@ -8,6 +8,7 @@ interface FinderFacadeInterface
 {
     /**
      * @param iterable $directories
+     * @param bool $recursive
      * @param ValidatorChainInterface|null $chain
      * @param iterable|null $onAccept
      * @param iterable|null $onReject
@@ -16,6 +17,7 @@ interface FinderFacadeInterface
      */
 	public static function find(
         iterable $directories,
+        bool $recursive = true,
         ValidatorChainInterface $chain=null,
         iterable $onAccept=null,
         iterable $onReject=null,

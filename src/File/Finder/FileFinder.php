@@ -17,13 +17,13 @@ class FileFinder implements FileFinderInterface
         $this->adapters = $adapters;
     }
 
-    public function find(iterable $directories): iterable
+    public function find(iterable $directories, bool $recursive = true): iterable
     {
         /**
          * @var AdapterInterface $adapter
          */
         foreach($this->adapters as $adapter){
-            yield from $adapter->find($directories);
+            yield from $adapter->find($directories, $recursive);
         }
     }
 
