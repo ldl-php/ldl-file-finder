@@ -9,9 +9,10 @@ interface AdapterInterface
 {
     /**
      * @param iterable $locations
+     * @param bool $recursive
      * @return iterable
      */
-    public function find(iterable $locations): iterable;
+    public function find(iterable $locations, bool $recursive = true): iterable;
 
     /**
      * Obtains the chain of validators
@@ -19,37 +20,6 @@ interface AdapterInterface
      * @return null|ValidatorChainInterface
      */
     public function getValidatorChain(): ?ValidatorChainInterface;
-
-
-    /**
-     * As soon as a file is matched, regardless of the validations, the file will be sent
-     * to this callable collection.
-     *
-     * @return CallableCollection
-     */
-    public function onFile() : CallableCollection;
-
-    /**
-     * When a file is invalid, this set of callbacks will be called, the anonymous functions
-     * added to this callback collection must take two arguments:
-     *
-     *  $path: string (URI of the file)
-     *  $validators: ValidatorChainInterface (current chain of validators)
-     *
-     * @return CallableCollection
-     */
-    public function onReject() : CallableCollection;
-
-    /**
-     * When a file is valid, this set of callbacks will be called, the anonymous functions
-     * added to this callback collection must take two arguments:
-     *
-     *  $path: string (URI of the file)
-     *  $validators: ValidatorChainInterface (current chain of validators)
-     *
-     * @return CallableCollection
-     */
-    public function onAccept() : CallableCollection;
 
     /**
      * @return int

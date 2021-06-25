@@ -4,5 +4,5 @@ namespace LDL\File\Finder;
 
 interface FileFinderInterface
 {
-    public function find(iterable $directories): iterable;
+    public function find(iterable $directories, bool $recursive = true): iterable;
 }
