@@ -15,5 +15,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Changed
 
+- fix/1200641806243436 - Change getValidatorChain from FoundFile to getValidators
 - fix/1200373038347526 - Refactor FinderFacadeInterface 
 - fix/1200190593143580 - Apply changes from ldl-typed-collection

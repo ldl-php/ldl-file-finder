@@ -2,7 +2,6 @@
 
 namespace LDL\File\Finder\Adapter;
 
-use LDL\Framework\Base\Collection\CallableCollection;
 use LDL\Validators\Chain\ValidatorChainInterface;
 
 interface AdapterInterface
