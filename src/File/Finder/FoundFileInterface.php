@@ -20,6 +20,6 @@ interface FoundFileInterface
     /**
      * @return ValidatorCollectionInterface
      */
-    public function getValidatorChain(): ValidatorCollectionInterface;
+    public function getValidators(): ValidatorCollectionInterface;
 
 }
