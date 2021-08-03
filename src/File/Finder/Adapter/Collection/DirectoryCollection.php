@@ -16,6 +16,7 @@ class DirectoryCollection extends AbstractCollection
         parent::__construct($items);
 
         $this->getAppendValueValidatorChain()
+            ->getChainItems()
             ->append(new InterfaceComplianceValidator(DirectoryInterface::class))
             ->lock();
     }
