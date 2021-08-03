@@ -15,6 +15,7 @@ class AdapterCollection extends ObjectCollection
     {
         parent::__construct($items);
         $this->getAppendValueValidatorChain()
+            ->getChainItems()
             ->append(new InterfaceComplianceValidator(AdapterInterface::class))
             ->lock();
     }

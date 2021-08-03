@@ -17,6 +17,7 @@ class FinderResult extends ObjectCollection
         parent::__construct($items);
 
         $this->getAppendValueValidatorChain()
+            ->getChainItems()
             ->append(new ClassComplianceValidator(FoundFile::class, $strict=true))
             ->lock();
     }
