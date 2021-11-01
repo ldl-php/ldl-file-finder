@@ -2,9 +2,10 @@
 
 namespace LDL\File\Finder;
 
+use LDL\Framework\Base\Contracts\Type\ToStringInterface;
 use LDL\Validators\Collection\ValidatorCollectionInterface;
 
-interface FoundFileInterface
+interface FoundFileInterface extends ToStringInterface
 {
 
     /**
@@ -18,8 +19,8 @@ interface FoundFileInterface
     public function getFileObject();
 
     /**
-     * @return ValidatorCollectionInterface
+     * @return ValidatorCollectionInterface|null
      */
-    public function getValidators(): ValidatorCollectionInterface;
+    public function getValidators(): ?ValidatorCollectionInterface;
 
 }

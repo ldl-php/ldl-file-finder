@@ -3,11 +3,11 @@
 namespace LDL\File\Finder\Adapter\Collection;
 
 use LDL\File\Finder\DirectoryInterface;
-use LDL\Type\Collection\AbstractCollection;
+use LDL\Type\Collection\AbstractTypedCollection;
 use LDL\Type\Collection\Traits\Validator\AppendValueValidatorChainTrait;
 use LDL\Validators\InterfaceComplianceValidator;
 
-class DirectoryCollection extends AbstractCollection
+class DirectoryCollection extends AbstractTypedCollection
 {
     use AppendValueValidatorChainTrait;
 

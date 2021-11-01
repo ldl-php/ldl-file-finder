@@ -47,12 +47,17 @@ class FoundFile implements FoundFileInterface
     /**
      * @return ValidatorCollectionInterface
      */
-    public function getValidators(): ValidatorCollectionInterface
+    public function getValidators(): ?ValidatorCollectionInterface
     {
         return $this->validators;
     }
 
-    public function __toString()
+    public function toString(): string
+    {
+        return $this->getPath();
+    }
+
+    public function __toString() : string
     {
         return $this->getPath();
     }

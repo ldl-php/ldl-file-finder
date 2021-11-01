@@ -2,13 +2,15 @@
 
 namespace LDL\File\Finder;
 
+use LDL\Framework\Base\Collection\Traits\CollectionInterfaceTrait;
+use LDL\Type\Collection\AbstractTypedCollection;
 use LDL\Type\Collection\Traits\Validator\AppendValueValidatorChainTrait;
-use LDL\Type\Collection\Types\Object\ObjectCollection;
 use LDL\Validators\ClassComplianceValidator;
 
-class FinderResult extends ObjectCollection
+class FinderResult extends AbstractTypedCollection
 {
     use AppendValueValidatorChainTrait;
+    use CollectionInterfaceTrait;
 
     public function __construct(
         iterable $items = null
