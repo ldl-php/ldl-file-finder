@@ -3,11 +3,12 @@
 namespace LDL\File\Finder\Adapter\Collection;
 
 use LDL\File\Finder\Adapter\AdapterInterface;
+use LDL\Type\Collection\AbstractTypedCollection;
 use LDL\Type\Collection\Traits\Validator\AppendValueValidatorChainTrait;
 use LDL\Type\Collection\Types\Object\ObjectCollection;
 use LDL\Validators\InterfaceComplianceValidator;
 
-class AdapterCollection extends ObjectCollection
+class AdapterCollection extends AbstractTypedCollection
 {
     use AppendValueValidatorChainTrait;
 
